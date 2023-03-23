@@ -17,6 +17,8 @@ contract LightsaberCat is ERC721, ERC721URIStorage, Ownable {
     Counters.Counter public tokenIdCounter;
     mapping(address => uint8) public walletMints;
 
+    event TokenMinted(address indexed to, uint tokenId);
+
     constructor() ERC721("LightsaberCat", "LSCAT") {
         mintPrice = 0.02 ether;
         maxSupply = 1000;
@@ -30,11 +32,12 @@ contract LightsaberCat is ERC721, ERC721URIStorage, Ownable {
         require(walletMints[msg.sender] < maxPerWallet, "Sorry, you already minted the maximum of ${maxPerWallet} tokens");
         require(quantity * mintPrice == msg.value, "Wrong mint amount");
         
-        for (uint8 i = 0; i <= quantity; i++) {
+        for (uint8 i = 1; i <= quantity; i++) {
             tokenIdCounter.increment();
             tokenId = tokenIdCounter.current();
-            _safeMint(msg.sender, tokenId);
+            emit TokenMinted(msg.sender, tokenId);
             _setTokenURI(tokenId, uri);
+            _safeMint(msg.sender, tokenId);
         }
     }
 
