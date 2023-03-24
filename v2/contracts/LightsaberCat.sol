@@ -27,7 +27,7 @@ contract LightsaberCat is ERC721, ERC721URIStorage, Ownable {
 
     function mint(uint8 quantity, string memory uri) public payable {
         uint256 tokenId = tokenIdCounter.current();
-        require(isPublicMintAllowed, "Public minting not allowed");
+          require(isPublicMintAllowed, "Public minting not allowed");
         require(tokenIdCounter.current() <= maxSupply, "Sorry, max supply of tokens was reached");
         require(walletMints[msg.sender] < maxPerWallet, "Sorry, you already minted the maximum of ${maxPerWallet} tokens");
         require(quantity * mintPrice == msg.value, "Wrong mint amount");
