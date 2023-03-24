@@ -50,13 +50,18 @@ contract LightsaberCat is ERC721, ERC721URIStorage, Ownable {
         isPublicMintAllowed = isItAllowed;
     }
 
+    function tokenURI(uint256 tokenId) public view override(ERC721, ERC721URIStorage) returns (string memory) {
+        return ERC721URIStorage.tokenURI(tokenId);
+    }
+
     function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
         super._burn(tokenId);
     }
 
-    function tokenURI(uint256 tokenId) public view override(ERC721, ERC721URIStorage) returns (string memory) {
-        return super.tokenURI(tokenId);
+    function _baseURI() internal pure override returns (string memory) {
+        return "ipfs://QmYr5yHt5J9hggByGmK4FNmFXqSuA6xX84zzBe111yAnzo/";
     }
+
 
 
 }

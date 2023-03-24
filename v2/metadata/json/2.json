@@ -1,0 +1,20 @@
+{
+    "name": "Charles Catnip",
+    "description": "Introducing Charles Catnip. Living in his castle, he contemplates on the smallness of humans, and uses the Force to protect his cat realm",
+    "image": "https://gateway.pinata.cloud/ipfs/QmWd9jWEB5t6ayoXPjhEMFJsKm83i9fYSkBkgFzdVfPs5r/2.png",
+    "external_url": "https://github.com/poletto123/lightsaberCat_NFT_solidity",
+    "attributes": [
+        {
+            "trait_type": "Power", 
+            "value": "3"
+        },
+        {
+            "trait_type": "Diplomacy", 
+            "value": "9"
+        },
+        {
+            "trait_type": "Strategy", 
+            "value": "4"
+        }
+    ]
+}
