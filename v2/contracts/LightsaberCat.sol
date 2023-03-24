@@ -62,6 +62,4 @@ contract LightsaberCat is ERC721, ERC721URIStorage, Ownable {
         return "ipfs://QmYr5yHt5J9hggByGmK4FNmFXqSuA6xX84zzBe111yAnzo/";
     }
 
-
-
 }
