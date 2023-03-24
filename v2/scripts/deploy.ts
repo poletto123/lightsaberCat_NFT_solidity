@@ -1,6 +1,7 @@
 async function main() {
     const LightsaberCat = await ethers.getContractFactory("LightsaberCat");
     const lscat = await LightsaberCat.deploy();
+    await lscat.deployed();
     console.log("Token address: ", lscat.address);
 }
 

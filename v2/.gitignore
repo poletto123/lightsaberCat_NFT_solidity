@@ -9,3 +9,7 @@ typechain-types
 cache
 artifacts
 
+#secrets
+.etherscan
+.infura
+.secret
