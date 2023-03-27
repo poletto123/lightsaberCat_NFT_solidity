@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { ethers, BigNumber } from 'ethers';
 import lightsaberCat from './LightsaberCat.json';
 
-const lightsaberCatAddress = '';
+const lightsaberCatAddress = '0x93544f7F16bc6648c7da21B6D407A7E1F73C68cf';
+const mintPrice = 0.02;
 
 const Mint = ({ accounts, setAccounts }) => {
     const [mintAmount, setMintAmount] = useState(1);
@@ -18,7 +19,9 @@ const Mint = ({ accounts, setAccounts }) => {
                 signer
             );
             try {
-                const response = await contract.mint(BigNumber.from(mintAmount), '1.json');
+                const response = await contract.mint(BigNumber.from(mintAmount), '3.json', {
+                    value: ethers.utils.parseEther((mintPrice * mintAmount).toString())
+                });
                 console.log('response: ', response);
             } catch (err) {
                 console.log('error: ', err)

@@ -1,7 +1,7 @@
 {
     "name": "Edward Bellybottom",
     "description": "Introducing Edward Bellybottom. Living in his castle, he contemplates on the smallness of humans, and uses the Force to protect his cat realm",
-    "image": "https://gateway.pinata.cloud/ipfs/QmWd9jWEB5t6ayoXPjhEMFJsKm83i9fYSkBkgFzdVfPs5r/1.png",
+    "image": "ipfs://QmWd9jWEB5t6ayoXPjhEMFJsKm83i9fYSkBkgFzdVfPs5r/1.png",
     "external_url": "https://github.com/poletto123/lightsaberCat_NFT_solidity",
     "attributes": [
         {

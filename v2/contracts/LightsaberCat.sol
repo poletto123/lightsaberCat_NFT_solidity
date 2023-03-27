@@ -1,6 +1,6 @@
 //SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
@@ -27,14 +27,15 @@ contract LightsaberCat is ERC721, ERC721URIStorage, Ownable {
 
     function mint(uint8 quantity, string memory uri) public payable {
         uint256 tokenId = tokenIdCounter.current();
-          require(isPublicMintAllowed, "Public minting not allowed");
         require(tokenIdCounter.current() <= maxSupply, "Sorry, max supply of tokens was reached");
-        require(walletMints[msg.sender] < maxPerWallet, "Sorry, you already minted the maximum of ${maxPerWallet} tokens");
+        require(isPublicMintAllowed, "Public minting not allowed");
+        require(walletMints[msg.sender] + quantity <= maxPerWallet, "Sorry, you already minted the maximum of tokens");
         require(quantity * mintPrice == msg.value, "Wrong mint amount");
         
         for (uint8 i = 1; i <= quantity; i++) {
             tokenIdCounter.increment();
             tokenId = tokenIdCounter.current();
+            walletMints[msg.sender]++;
             emit TokenMinted(msg.sender, tokenId);
             _safeMint(msg.sender, tokenId);
             _setTokenURI(tokenId, uri);
@@ -59,7 +60,7 @@ contract LightsaberCat is ERC721, ERC721URIStorage, Ownable {
     }
 
     function _baseURI() internal pure override returns (string memory) {
-        return "ipfs://QmYr5yHt5J9hggByGmK4FNmFXqSuA6xX84zzBe111yAnzo/";
+        return "ipfs://QmPywqhLiveEuSpnqjvH5XibgoGpf6kXTGJucAYt1EHcZC/";
     }
 
 }
