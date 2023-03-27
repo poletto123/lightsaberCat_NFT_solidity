@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ethers } from 'hre';
+import { ethers, BigNumber } from 'ethers';
 import lightsaberCat from './LightsaberCat.json';
 
 const lightsaberCatAddress = '';
