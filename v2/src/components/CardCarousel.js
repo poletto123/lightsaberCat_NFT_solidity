@@ -1,29 +1,38 @@
 import { useState, useEffect } from "react";
-import { Box, Flex, IconButton, Text } from "@chakra-ui/react";
+import { Box, Flex, IconButton, Text, Image } from "@chakra-ui/react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import FirstImage from '../assets/1.png';
+import SecondImage from '../assets/2.png';
+import ThirdImage from '../assets/3.png';
 
 const cards = [
   {
     id: 1,
     name: "Edward Bellybottom",
-    description:
-      "Introducing Edward Bellybottom. Living in his castle, he contemplates on the smallness of humans, and uses the Force to protect his cat realm.",
+    attribute1: "Power: 9",
+    attribute2: "Diplomacy: 2",
+    attribute3: "Strategy: 4",
+    imageFile: FirstImage
   },
   {
     id: 2,
-    name: "Jane Doe",
-    description:
-      "Jane Doe is an artist and writer based in New York City. Her work explores themes of identity, memory, and the natural world.",
+    name: "Charles Catnip",
+    attribute1: "Power: 3",
+    attribute2: "Diplomacy: 9",
+    attribute3: "Strategy: 4",
+    imageFile: SecondImage
   },
   {
     id: 3,
-    name: "John Smith",
-    description:
-      "John Smith is a software engineer and entrepreneur based in San Francisco. He is passionate about building innovative products that solve real-world problems.",
+    name: "James O'My",
+    attribute1: "Power: 6",
+    attribute2: "Diplomacy: 6",
+    attribute3: "Strategy: 9",
+    imageFile: ThirdImage
   },
 ];
 
-const Card = ({ name, description, visible }) => {
+const Card = ({ name, attribute1, attribute2, attribute3, imageFile, visible }) => {
   const [opacity, setOpacity] = useState(visible ? 1 : 0);
 
   useEffect(() => {
@@ -40,36 +49,65 @@ const Card = ({ name, description, visible }) => {
     <Box
       position="absolute"
       width="100%"
-      height="100%"
+      // height="50%"
       top="0"
       left="0"
       opacity={opacity}
       transition="opacity 0.5s ease"
       onTransitionEnd={handleTransitionEnd}
+      backgroundColor="#00022C"
+      borderRadius="20px"
+      marginTop="20px"
+      borderStyle="solid"
     >
       <Flex
         flexDirection="column"
         alignItems="center"
         justifyContent="center"
-        height="100%"
+        height="40%"
       >
-        <Text fontSize="48px" textShadow="0 px #00000">
+        <Text margin="20px" fontSize="30px" textShadow="0 px #00000">
           {name}
         </Text>
-        <Text
-          fontSize="30px"
-          letterSpacing="-5.5%"
-          fontFamily="inherit"
-          textShadow="0 2px 2px"
-        >
-          {description}
-        </Text>
+        <Image src={imageFile} boxSize="60%" borderRadius="30px"/>
+          <Flex
+            flexDirection="row"
+            alignItems="center"
+            justifyContent="center"
+            height="10%"
+            margin="20px"
+          >
+            <Text
+              fontSize="20px"
+              letterSpacing="-5.5%"
+              fontFamily="inherit"
+              margin="0 15px 0 15px"
+            >
+              {attribute1}
+            </Text>
+            <Text
+              fontSize="20px"
+              letterSpacing="-5.5%"
+              fontFamily="inherit"
+              margin="0 15px 0 15px"
+            >
+              {attribute2}
+            </Text>
+            <Text
+              fontSize="20px"
+              letterSpacing="-5.5%"
+              fontFamily="inherit"
+              margin="0 15px 0 15px"
+            >
+              {attribute3}
+            </Text>
+          </Flex>
       </Flex>
     </Box>
   );
 };
 
-const CardSlider = ({currentCardIndex, setCurrentCardIndex}) => {
+const CardSlider = ({ currentCardIndex, setCurrentCardIndex }) => {
 
   const handleNext = () => {
     let nextIndex = currentCardIndex + 1;
@@ -78,7 +116,7 @@ const CardSlider = ({currentCardIndex, setCurrentCardIndex}) => {
     }
     setCurrentCardIndex(nextIndex);
   };
-  
+
   const handlePrev = () => {
     let prevIndex = currentCardIndex - 1;
     if (prevIndex < 0) {
@@ -86,15 +124,15 @@ const CardSlider = ({currentCardIndex, setCurrentCardIndex}) => {
     }
     setCurrentCardIndex(prevIndex);
   };
-  
+
   return (
     <Box position="relative" height="400px" width="600px" margin="0 auto">
       <IconButton
         aria-label="Previous card"
         icon={<FaArrowLeft />}
-        position="absolute"
-        left="0"
-        top="50%"
+        position="relative"
+        right="40%"
+        top="60%"
         transform="translateY(-50%)"
         zIndex="1"
         onClick={handlePrev}
@@ -102,9 +140,9 @@ const CardSlider = ({currentCardIndex, setCurrentCardIndex}) => {
       <IconButton
         aria-label="Next card"
         icon={<FaArrowRight />}
-        position="absolute"
-        right="0"
-        top="50%"
+        position="relative"
+        left="40%"
+        top="60%"
         transform="translateY(-50%)"
         zIndex="1"
         onClick={handleNext}
@@ -114,6 +152,10 @@ const CardSlider = ({currentCardIndex, setCurrentCardIndex}) => {
           key={card.id}
           name={card.name}
           description={card.description}
+          attribute1={card.attribute1}
+          attribute2={card.attribute2}
+          attribute3={card.attribute3}
+          imageFile={card.imageFile}
           visible={index === currentCardIndex}
         />
       ))}

@@ -3,7 +3,7 @@ import { ethers, BigNumber } from 'ethers';
 import lightsaberCat from '../LightsaberCat.json';
 import { Box, Button, Flex, Input, Text } from '@chakra-ui/react';
 
-const lightsaberCatAddress = '0x93544f7F16bc6648c7da21B6D407A7E1F73C68cf';
+const lightsaberCatAddress = '0xD1ADeC606Ea9BE252C38357a9A04767163E41553';
 const mintPrice = 0.02;
 
 const Mint = ({ accounts, currentCardIndex }) => {
@@ -43,40 +43,46 @@ const Mint = ({ accounts, currentCardIndex }) => {
     };
 
     return (
-        <Flex justify="center" align="center" height="100vh">
-            <Box width="520px">
+        <Flex justify="center" align="center" height="50vh">
+            <Box width="520px" >
                     {isConnected ? (
                         <div>
                             <Flex align="center" justify="center">
                                 <Button
-                                    fontSize="30px"
-                                    borderRadius="5px"
-                                    boxShadow="0px 2px 2px 1px"
+                                    fontSize="20px"
+                                    width="60px"
+                                    height="60px"
+                                    borderRadius="50px"
                                     fontFamily="inherit"
                                     cursor="pointer"
                                     padding="15px"
                                     marginTop="10px"
+                                    boxShadow="rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset"
                                     onClick={handleDecrement}>
                                         -
                                     </Button>
                                 <Input 
-                                    fontSize="30px"
+                                    fontSize="20px"
+                                    borderRadius="50px"
                                     readOnly
                                     fontFamily="inherit"
-                                    width="100px"
-                                    height="80px"
+                                    width="60px"
+                                    height="60px"
                                     textAlign="center"
                                     margin="30px"
                                     type="number"
+                                    boxShadow="rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset"
                                     value={mintAmount} />
                                 <Button
-                                    fontSize="30px"
-                                    borderRadius="5px"
-                                    boxShadow="0px 2px 2px 1px"
+                                    fontSize="20px"
+                                    width="60px"
+                                    height="60px"
+                                    borderRadius="50px"
                                     fontFamily="inherit"
                                     cursor="pointer"
                                     padding="15px"
                                     marginTop="10px"
+                                    boxShadow="rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset"
                                     onClick={handleIncrement}>
                                     +
                                 </Button>
@@ -85,11 +91,11 @@ const Mint = ({ accounts, currentCardIndex }) => {
                                 fontSize="30px"
                                 backgroundColor="white"
                                 borderRadius="5px"
-                                boxShadow="0px 2px 2px 1px"
                                 cursor="pointer"
                                 fontFamily="inherit"
                                 padding="15px"
-                                marginTop="10px"
+                                // margin="0"
+                                boxShadow="rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset"
                                 onClick={handleMint}>
                                     Mint Now
                             </Button>

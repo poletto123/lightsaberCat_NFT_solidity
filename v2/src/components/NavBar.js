@@ -10,7 +10,7 @@ const NavBar = ({ accounts, setAccounts }) => {
       const accounts = await window.ethereum.request({
         method: "eth_requestAccounts",
       });
-      setAccounts(accounts);
+      setAccounts(accounts); 
     }
   }
 
@@ -20,25 +20,25 @@ const NavBar = ({ accounts, setAccounts }) => {
       align="center"
       justify="space-between"
       wrap="wrap"
-      padding="1.5rem"
+      padding="1.2rem"
       bg="gray.900"
       color="white"
     >
       {/* Left side */}
-      <Flex justify="space-around" width="40%">
+      <Flex justify="space-around" width="20%">
         <Link href="https://github.com/poletto123">
-          <Box as={FaLinkedin} boxSize="42px" margin="0 15px" fill="white" />
+          <Box as={FaLinkedin} boxSize="32px" margin="0 15px" fill="white" />
         </Link>
         <Link href="https://www.Linkedin.com/in/poletto123/">
-          <Box as={FaGithub} boxSize="42px" margin="0 15px" fill="white" />
+          <Box as={FaGithub} boxSize="32px" margin="0 15px" fill="white" />
         </Link>
         <Link href="mailto:poletto123@gmail.com">
-          <Box as={FaEnvelope} boxSize="42px" margin="0 15px" fill="white" />
+          <Box as={FaEnvelope} boxSize="32px" margin="0 15px" fill="white" />
         </Link>
       </Flex>
 
       {/* Right side */}
-      <Flex justify="flex-end" width="40%" align="center">
+      <Flex justify="flex-end" width="20%" align="center">
         <Box margin="0 15px">About</Box>
         <Spacer />
         <Box margin="0 15px">Mint</Box>
@@ -56,7 +56,7 @@ const NavBar = ({ accounts, setAccounts }) => {
             cursor="pointer"
             fontFamily="inherit"
             fontWeight="normal"
-            fontSize="30px"
+            fontSize="20px"
             padding="8px 15px"
             margin="0 15px"
             boxShadow="0px 1px 1px rgba(0, 0, 0, 0.1)"
