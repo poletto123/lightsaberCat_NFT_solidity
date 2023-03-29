@@ -1,12 +1,7 @@
 # lightsaberCat_NFT_solidity v2
 
-[DESCRIPTION](#description)   
 [DETAILS](#details)   
 [HOW TO RUN](#how-to-run)   
-
-### **DESCRIPTION**
-
-This is a NFT project called LightsaberCat made for study purposes. All the source code and metadata is shared for anyone interested in learning.
 
 ### **DETAILS**
 
