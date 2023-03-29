@@ -27,8 +27,8 @@ npm start
 
 2. Install Metamask wallet to your browser, then add fake ETH to it with a faucet. Examples:
 
-https://goerlifaucet.com/
-https://goerli-faucet.pk910.de/
+- https://goerlifaucet.com/
+- https://goerli-faucet.pk910.de/
 
 3. Mint one or more NFT's with the front-end website
 
