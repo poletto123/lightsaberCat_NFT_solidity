@@ -1,8 +1,8 @@
 # lightsaberCat_NFT_solidity v2
 
-[DESCRIPTION](#description)
-[DETAILS](#details)
-[HOW TO RUN](#how-to-run)
+[DESCRIPTION](#description)   
+[DETAILS](#details)   
+[HOW TO RUN](#how-to-run)   
 
 ### **DESCRIPTION**
 
