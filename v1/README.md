@@ -1,4 +1,4 @@
-# lightsaberCat_NFT_solidity
+# lightsaberCat_NFT_solidity v1
 
 This is the smart contract for a ERC721 NFT token called Lightsaber Cat. It is currently deployed on the Goerli test network, which is accessible via the Opensea test network:
 

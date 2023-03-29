@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# lightsaberCat_NFT_solidity v2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[DESCRIPTION](#description)
+[DETAILS](#details)
+[HOW TO RUN](#how-to-run)
 
-## Available Scripts
+### **DESCRIPTION**
 
-In the project directory, you can run:
+This is a NFT project called LightsaberCat made for study purposes. All the source code and metadata is shared for anyone interested in learning.
 
-### `npm start`
+### **DETAILS**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- NFT contract built with Solidity and Hardhat
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Unit tests of contract made with Chai, Mocha and Waffle
 
-### `npm test`
+- Deployed the contract on the Goerli test network on the Ethereum blockchain. The transaction can be viewed on Etherscan, which is a public visualizer for any transaction that happens on the blockchain - https://goerli.etherscan.io/address/0xD1ADeC606Ea9BE252C38357a9A04767163E41553
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Front-end website made with ReactJS (Hooks) and Chakra UI, which allows for an user to mint up to 3 NFT's of 3 different kinds directly to their Metamask wallet
 
-### `npm run build`
+- NFT's are accesible by the biggest NFT marketplace, which is OpenSea (test version), allowing you to sell your NFT - https://testnets.opensea.io/collection/lightsabercat-4
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Hosted the metadata via a decentralized storage protocol called IPFS, via the Pinata gateway. File example - https://gateway.pinata.cloud/ipfs/QmPywqhLiveEuSpnqjvH5XibgoGpf6kXTGJucAYt1EHcZC/1.json
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **HOW TO RUN**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the project to your computer, install NodeJS, and then type
 
-### `npm run eject`
+```
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install Metamask wallet to your browser, then add fake ETH to it with a faucet. Examples:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+https://goerlifaucet.com/
+https://goerli-faucet.pk910.de/
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Mint one or more NFT's with the front-end website
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Go to https://testnets.opensea.io, connect your Metamask wallet, and you'll be able to mark your NFT's for sale!
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Screenshot1](screenshot1.png)
+![Screenshot2](screenshot2.png)
+![Screenshot3](screenshot3.png)
