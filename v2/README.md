@@ -11,7 +11,8 @@
 
 - Deployed the contract on the Goerli test network on the Ethereum blockchain. The transaction can be viewed on Etherscan, which is a public visualizer for any transaction that happens on the blockchain - https://goerli.etherscan.io/address/0xD1ADeC606Ea9BE252C38357a9A04767163E41553
 
-- Front-end website made with ReactJS (Hooks) and Chakra UI, which allows for an user to mint up to 3 NFT's of 3 different kinds directly to their Metamask wallet
+- Front-end website made with ReactJS (Hooks) and Chakra UI, which allows for an user to mint up to 3 NFT's of 3 different kinds directly to their Metamask wallet. Deployed via Vercel:
+https://lightsaber-cat-nft-solidity.vercel.app/
 
 - NFT's are accesible by the biggest NFT marketplace, which is OpenSea (test version), allowing you to sell your NFT - https://testnets.opensea.io/collection/lightsabercat-4
 
